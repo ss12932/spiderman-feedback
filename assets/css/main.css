@@ -123,6 +123,48 @@ body {
 }
 /* End of Button Styles */
 
+/* start of question styles */
+.question-container {
+  padding: 0;
+  background: transparent;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(var(--ash-grey-rgb), 0.7),
+      rgba(var(--ash-grey-rgb), 0.4)
+    ),
+    url("../img/spiderman.png");
+  background-position: 0px 0px;
+  background-repeat: repeat-x;
+  animation: animatedBackground 10s linear infinite alternate;
+}
+
+.question-container .content-section-title {
+  background-color: rgba(var(--carnelian-rgb), 0.8);
+}
+
+.feedback-list {
+  list-style: none;
+  text-align: left;
+  margin: 3rem 2rem;
+  padding: 2rem;
+  border-radius: 0.4rem;
+  background-color: rgba(var(--carnelian-rgb), 0.8);
+}
+
+.list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem 0;
+  font-size: 1.8rem;
+}
+
+.list-item:hover {
+  background-color: var(--cyan-blue-azure);
+  cursor: pointer;
+}
+/* end of question styles */
+
 /* Start of footer styles */
 .footer {
   background-color: var(--carnelian);
@@ -154,11 +196,22 @@ body {
 }
 /* End of footer styles */
 
+/* Start of Media Queries */
 @media screen and (max-width: 768px) {
   .main {
     margin: 0 1rem;
   }
   .content-section {
     margin: 2rem 0.75rem;
+  }
+}
+/* End of Media Queries */
+
+@keyframes animatedBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
   }
 }
