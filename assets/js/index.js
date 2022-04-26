@@ -14,6 +14,7 @@ const renderQuestion = () => {
 // function to remove banner from page
 const removeBanner = () => {
   console.log("remove banner");
+  bannerSection.remove();
 };
 
 // declare the event handler function for start button click
@@ -29,3 +30,5 @@ const handleStartButtonClick = () => {
 
 // add event listener to start button
 startButton.addEventListener("click", handleStartButtonClick);
+
+//export callback fn outside. removebanner and renderquestion then exported functionality outside into its own fns. much cleaner and readable
